@@ -6,7 +6,7 @@ node('linux') {
     stage('Test') {
         sh "env"
            }
-}
+
 
 stage ("GetInstances") {
 
@@ -19,4 +19,5 @@ stage ("CreateInstance") {
     sh "aws ec2 run-instances --image-id ami-013be31976ca2c322 --count 1 --instance-type t2.micro --key-name seis665 --security-group-ids sg-05cb6368a6f5ecd28 --subnet-id subnet-529d1b35 --region us-east-1"
 
 
+}
 }
